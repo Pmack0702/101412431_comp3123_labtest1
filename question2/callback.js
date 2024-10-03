@@ -1,26 +1,24 @@
-function resolvedPromise() { // This function create a promise that resolves after 500 milliseconds
+function resolvedPromise() { 
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve('The promise was successfully resolved!'); // Successful resolution message
-        }, 500); // Delay of 500 milliseconds
+            resolve('The promise was successfully resolved!');
+        }, 500); 
     });
 }
 
-// Function to create a promise that rejects after 500ms with an error message
 function rejectedPromise() {
     return new Promise((reject) => {
         setTimeout(() => {
-            reject('The promise was rejected with an error!'); // Error rejection message
-        }, 500); // Delay of 500 milliseconds
+            reject('The promise was rejected with an error!'); 
+        }, 500); 
     });
 }
 
-// Function to handle both promises
 function executePromises() {
     // Handling the resolved promise
     resolvedPromise()
         .then(success => {
-            console.log(success); // Output the success message
+            console.log(success); // Output of success message
         })
         .catch(err => {
             console.error(err); 
@@ -29,7 +27,7 @@ function executePromises() {
     // Handling the rejected promise
     rejectedPromise()
         .then(success => {
-            console.log(success); // This won't be executed
+            console.log(success); 
         })
         .catch(err => {
             console.error(err); // Output the error message
